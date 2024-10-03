@@ -1,0 +1,9 @@
+.w-full.h-full.p-4
+  - @pastedata.data.each do |key, val|
+    %div.flex.items-center.gap-2
+      %span.inline-block
+        = key.to_s + ": "
+      %span.inline-block.max-w-32.truncate
+        = val.to_s
+      %button.btn.btn-sm{onclick: "navigator.clipboard.writeText('#{val.to_s.gsub("'", "\\'")}')"}
+        Copy

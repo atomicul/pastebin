@@ -1,0 +1,12 @@
+= form_tag pastedata_path, method: :post, class: "w-full h-full box-border p-8" do
+  .form-control.w-full
+    .label
+      Data
+    %textarea{name: "data", placeholder: "e. g.\nfoo: bar\nname: John\nage: 19", class: "textarea textarea-bordered h-48 w-full"}
+  .form-control.w-full
+    .label
+      Password
+    %input{name: "password", placeholder: "e. g. my-super-secret-passphrase", class: "input input-bordered w-full"}
+  %button{type: "submit", class: "btn btn-primary mt-4"}
+    Submit
+

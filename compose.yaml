@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:3000"
+    secrets:
+      - db_uri
+      - rails_master_key
+secrets:
+  db_uri:
+    environment: DB_URI
+  rails_master_key:
+    environment: RAILS_MASTER_KEY

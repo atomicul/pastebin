@@ -1,0 +1,8 @@
+= form_tag pastedatum_path(@pastedata), method: :post, class: "w-full h-full box-border p-8" do
+  .form-control.w-full
+    .label
+      Password
+    %input{name: "password", class: "input input-bordered w-full"}
+  %button{type: "submit", class: "btn btn-primary mt-4"}
+    Submit
+

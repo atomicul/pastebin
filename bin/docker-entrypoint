@@ -1,0 +1,11 @@
+#!/bin/bash -e
+
+if test -f /run/secrets/db_uri; then
+  export DB_URI=$(cat /run/secrets/db_uri)
+fi
+
+if test -f /run/secrets/rails_master_key; then
+  export RAILS_MASTER_KEY=$(cat /run/secrets/rails_master_key)
+fi
+
+exec "${@}"
